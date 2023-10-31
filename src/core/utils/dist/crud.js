@@ -67,7 +67,7 @@ function crudCreate(params, createOpstions) {
                 case 2:
                     if (instance)
                         throw new common_1.BadRequestException('Dublicating data!');
-                    return [4 /*yield*/, params.repository.create(__assign(__assign({}, params.dto), { createUserId: params.request ? params.request.user.id : null, createOpstions: createOpstions }))];
+                    return [4 /*yield*/, params.repository.create(__assign(__assign({}, params.dto), { createUserId: params.request ? params.request.user.id : null }), createOpstions)];
                 case 3:
                     instance = _a.sent();
                     if (!(params.setFunction && Array.isArray(params.setData))) return [3 /*break*/, 5];

@@ -21,9 +21,8 @@ async function crudCreate(params: {
 
     instance = await params.repository.create({ 
         ...params.dto, 
-        createUserId: params.request ? params.request.user.id : null,
-        createOpstions
-    });
+        createUserId: params.request ? params.request.user.id : null        
+    }, createOpstions);
 
     if (params.setFunction && Array.isArray(params.setData))
         await instance[params.setFunction](params.setData);

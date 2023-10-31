@@ -69,6 +69,9 @@ async function bootstrap() {
   app.useGlobalPipes(new ValidationPipe({
       whitelist: true,
       transform: true,
+    //   transformOptions: {
+    //     enableImplicitConversion: true
+    //   }
   }));
 
   if ((process.env.NODE_ENV || PRODUCTION) === DEVELOPMENT) {

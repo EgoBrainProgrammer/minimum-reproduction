@@ -12,9 +12,6 @@ import { EntityHistory } from '../../modules/entityhistory/entityhistory.entity'
 import { Role } from '../../modules/roles/entities/role.entity';
 import { User } from '../../modules/users/entities/user.entity';
 import { EsaToken } from 'src/modules/auth/entities/esatoken.entity';
-import { Candidate } from 'src/modules/candidates/entities/candidate.entity';
-import { Nomination } from 'src/modules/nominations/entities/nomination.entity';
-import { Vote } from 'src/modules/votes/entities/vote.entity';
 
 export const databaseProviders = [{
     provide: SEQUELIZE,
@@ -42,7 +39,6 @@ export const databaseProviders = [{
         });
         sequelize.addModels([
             User, Role, RefreshToken, EsaToken, EntityEdit, EntityHistory, Department,
-            Candidate, Nomination, Vote,
 
             //--Таблицы связей--
             UserRole,
