@@ -9,9 +9,6 @@ import { DepartmentsModule } from './modules/departments/departments.module';
 import { EntityhistoryModule } from './modules/entityhistory/entityhistory.module';
 import { RolesModule } from './modules/roles/roles.module';
 import { UsersModule } from './modules/users/users.module';
-import { NominationsModule } from './modules/nominations/nominations.module';
-import { CandidatesModule } from './modules/candidates/candidates.module';
-import { VotesModule } from './modules/votes/votes.module';
 
 @Module({
   imports: [
@@ -25,9 +22,6 @@ import { VotesModule } from './modules/votes/votes.module';
     UsersModule,
     RolesModule,
     DepartmentsModule,
-    NominationsModule,
-    CandidatesModule,
-    VotesModule,
   ],
   controllers: [AppController],
   providers: [AppService],
